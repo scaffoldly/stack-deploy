@@ -1,6 +1,6 @@
 {
   "name": "@scaffoldly/stack-deploy",
-  "version": "1.0.0-1",
+  "version": "1.0.0",
   "description": "Deploy a Scaffoldly Stack",
   "repository": "git@github.com:scaffoldly/stack-deploy.git",
   "author": "Scaffoldly",
