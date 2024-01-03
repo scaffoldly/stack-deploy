@@ -1,4 +1,4 @@
-import { exportVariable, getInput, info, notice, setFailed, setOutput } from '@actions/core';
+import { exportVariable, getInput, info, notice, setOutput } from '@actions/core';
 import { exec } from './exec';
 
 const { GITHUB_TOKEN, GITHUB_REPOSITORY } = process.env;
@@ -6,8 +6,7 @@ const { GITHUB_TOKEN, GITHUB_REPOSITORY } = process.env;
 export class Action {
   async run(): Promise<void> {
     if (!GITHUB_TOKEN) {
-      setFailed(`Missing GITHUB_TOKEN environment variable`);
-      return;
+      throw new Error(`Missing GITHUB_TOKEN environment variable`);
     }
 
     if (!GITHUB_REPOSITORY) {
