@@ -1,0 +1,15 @@
+name: 'Stack Deploy'
+description: 'Deploy a Scaffoldly Stack'
+branding:
+  icon: 'arrow-up-circle'
+  color: 'blue'
+inputs:
+  todo:
+    description: Some input
+    required: false
+outputs:
+  todo:
+    description: Some Output
+runs:
+  using: 'node16'
+  main: 'dist/main.js'
